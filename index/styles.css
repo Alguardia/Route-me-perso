@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* ---------------------------- */
+body {
+    background: #000000;
+    color: white;
+    font-family: 'Pixel Sans Serif', sans-serif;
+    position: relative;
+    z-index: 1;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #0a0a0a;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.site-title {
+    font-family: "Dangerbot", serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    padding-top: 0px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    font-family: "Press Start 2P", serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+#logout {
+    text-decoration: underline;
+}
+
+#logout:hover {
+    color: red;
+}
+
+
+nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+nav ul li a:hover {
+    color: rgb(21, 255, 0);
+    font-style: italic;
+    transform: translateX(-5px);
+}
+
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 1px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(21, 255, 0);
+    margin-bottom: 1%;
+}
+
+fieldset {
+    border: 1px solid #09ff00;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+legend {
+    font-weight: bold;
+    color: rgb(21, 255, 0);
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+
+
+.ligne {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#challengeName{
+    width: 20%;
+    padding: 6px;
+    border: 1px solid rgb(21, 255, 0);
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: black;
+    color: #ddd;
+}
+
+#points{
+    width: 8%;
+    padding: 6px;
+    border: 1px solid rgb(21, 255, 0);
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: black;
+    color: #ddd;
+
+}
+
+.ligne2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 2%;
+}
+
+#category{
+    
+    width: 10%;
+    padding: 6px;
+    border: 1px solid rgb(21, 255, 0);
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: black;
+    color: #ddd;
+
+}
+
+
+
+.level-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 4px;
+
+}
+
+.level {
+    border: 3px solid;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    background-color: transparent;
+}
+
+
+.level:nth-child(1) { width: 8px; height: 10px; border-color: green; }
+.level:nth-child(2) { width: 8px; height: 16px; border-color: yellow; }
+.level:nth-child(3) { width: 8px; height: 22px; border-color: orange; }
+.level:nth-child(4) { width: 8px; height: 28px; border-color: red; }
+.level:nth-child(5) { width: 8px; height: 34px; border-color: #303030; }
+
+
+.level.selected {
+    background-color: var(--border-color);
+}
+
+
+
+
+.ligne3 {
+    display: flex;
+    gap: 15px;
+    margin-top: 3%;
+}
+
+
+
+
+#author{
+    width: 10%;
+    padding: 6px;
+    border: 1px solid rgb(21, 255, 0);
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: black;
+    color: #ddd;
+
+
+}
+
+#publicationDate{
+    width: 12%;
+    padding: 6px;
+    border: 1px solid rgb(21, 255, 0);
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: black;
+    color: #ddd;
+}
+
+#challengeStatement{
+    width: 100%;
+    padding: 6px;
+    border: 1px solid rgb(21, 255, 0);
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: black;
+    color: #ddd;
+    margin-top: 1%;
+
+}
+
+.fieldtool {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#toolsSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+    padding: 10px;
+}
+
+.tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 20%;
+}
+
+#addTool {
+    margin-top: 20px;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: rgb(21, 255, 0);
+    color: #222;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[id^="tool"] {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid rgb(21, 255, 0);
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: black;
+    color: #ddd;
+}
+
+.tool-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.removeTool {
+    width: fit-content;
+    padding: 6px;
+    background-color: red;
+    color: #222;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.fieldhint {
+    display: flex;
+    justify-content: center; /* Centre le bouton horizontalement */
+    align-items: center;
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+}
+
+#addHint {
+    margin-top: 20px;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: rgb(21, 255, 0);
+    color: #222;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#hintsSection {
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Les hints commenceront à gauche */
+    align-items: flex-start; /* Les hints seront alignés en haut */
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+}
+
+.hint {
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 70%; /* Limite la largeur des éléments */
+}
+
+textarea[id^="hint"] {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid rgb(21, 255, 0);
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: black;
+    color: #ddd;
+}
+
+.hint-container {
+    display: flex;
+    flex-direction: column; /* Empile les indices verticalement */
+    gap: 10px;
+    width: 100%;
+}
+
+.removeHint {
+    width: fit-content;
+    padding: 6px;
+    background-color: red;
+    color: #222;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.submit-btn{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.submit{
+    padding: 10px 20px;
+    font-family: 'Pixel Sans Serif', sans-serif;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    transition: 0.2s;
+
+}
+
+.submit:hover{
+    background: #09ff00;
+    color: black;
+}
+
+
+
+footer {
+    font-family: 'Pixel Sans Serif', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 50px;
+}
+
+
+
+
+

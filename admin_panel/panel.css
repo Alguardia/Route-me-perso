@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* ---------------------------- */
+body {
+    background: #000000;
+    color: white;
+    font-family: 'Pixel Sans Serif', sans-serif;
+    position: relative;
+    z-index: 1;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #0a0a0a;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.site-title {
+    font-family: "Dangerbot", serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    padding-top: 0px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    font-family: "Press Start 2P", serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+#logout {
+    text-decoration: underline;
+}
+
+#logout:hover {
+    color: red;
+}
+
+
+nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+nav ul li a:hover {
+    color: rgb(21, 255, 0);
+    font-style: italic;
+    transform: translateX(-5px);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 1px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+
+
+.challenge-card {
+    font-family: "Press Start 2P", serif;
+    font-size: 12px;
+    border: 1px solid #09ff00;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+
+.challenge-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 255, 0, 0.1);
+    border-left: 4px solid #09ff00;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 100%;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.toggle:hover {
+    transform: scale(1.01);
+}
+
+
+.toggle a {
+    text-decoration: none;
+    background-color: rgb(21, 255, 0);
+    color: black;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.toggle a:hover {
+    background-color: #07d300;
+    transform: scale(1.05);
+}
+
+
+
+.level-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3px;
+    margin-top: -25%;
+    margin-left: -275%;
+
+}
+
+.level {
+    border: 3px solid;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    background-color: transparent;
+
+}
+
+
+.level:nth-child(1) { width: 8px; height: 10px; border-color: green; }
+.level:nth-child(2) { width: 8px; height: 16px; border-color: yellow; }
+.level:nth-child(3) { width: 8px; height: 22px; border-color: orange; }
+.level:nth-child(4) { width: 8px; height: 28px; border-color: red; }
+.level:nth-child(5) { width: 8px; height: 34px; border-color: #303030; }
+
+.level.selected {
+    background-color: var(--border-color);
+}
+
+
+legend {
+    font-weight: bold;
+    color: rgb(21, 255, 0);
+    padding: 0 10px;
+}

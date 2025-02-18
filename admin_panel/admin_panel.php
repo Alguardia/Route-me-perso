@@ -73,26 +73,13 @@ try {
                 <span><strong>Date :</strong> <?php echo htmlspecialchars($formattedDate); ?></span>
                 <span><strong>Nom :</strong> <?php echo htmlspecialchars($challenge['challenge_name']); ?></span>
                 <span><strong>Catégorie :</strong> <?php echo htmlspecialchars($challenge['category']); ?></span>
-                <p><strong>Niveau :</strong></p>
-                <div class="level-wrapper">
-                    <div class="level-container">
-                        <?php 
-                        $levels = ["Très Facile", "Facile", "Moyen", "Difficile", "Très Difficile"];
-                        foreach ($levels as $lvl) {
-                            echo '<div class="level ' . ($challenge['level'] == $lvl ? 'selected' : '') . '" data-level="' . $lvl . '"></div>';
-                        }
-                        ?>
-                    </div>
-                </div>
+       
                 <span><strong>Auteur :</strong> <?php echo htmlspecialchars($challenge['author']); ?></span>
                 <a href="challenge.php?id=<?php echo $challenge['id']; ?>" class="btn-view">Voir le Challenge</a>
             </div>
         </div>
         <?php endforeach; ?>
     </fieldset>
-
-
-
 
     <script src="page.js"></script>
 

@@ -86,24 +86,6 @@ require 'fetch.php';
     </fieldset>
     </div>
 
-    <fieldset class="fieldtool">
-    <legend>Outils Utilisés</legend>
-    <div class="tool-list">
-        <?php
-        if (!empty($toolArray)) {
-            echo "<ul>";
-            foreach ($toolArray as $tool) {
-                echo "<li>" . htmlspecialchars($tool) . "</li>";
-            }
-            echo "</ul>";
-        } else {
-            echo "<p>Aucun outil trouvé.</p>";
-        }
-        ?>
-    </div>
-</fieldset>
-
-    
     
         <div class="hints-container">
         <fieldset class="fieldhint">

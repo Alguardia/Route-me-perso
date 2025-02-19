@@ -87,23 +87,25 @@ require 'fetch.php';
     </div>
 
     
-        <div class="hints-container">
-        <fieldset class="fieldhint">
+    <div class="hints-container">
+    <fieldset class="fieldhint">
         <legend>Indices</legend>
         <?php
-if (isset($hintArray) && !empty($hintArray)) {
-    foreach ($hintArray as $index => $hint) {
-        echo '<div class="hint">';
-        echo '<button class="hint-toggle">Indice ' . ($index + 1) . '</button>';
-        echo '<div class="hint-content" style="display:none;">' . htmlspecialchars($hint) . '</div>';
-        echo '</div>';
-    }
-} else {
-    echo 'Aucun indice trouvé.';
-}
-?>
-        </fieldset>
-        </div>
+        if (isset($hintArray) && !empty($hintArray)) {
+            foreach ($hintArray as $index => $hint) {
+                echo '<div class="hint">';
+                echo '<button class="hint-toggle">Indice ' . ($index + 1) . '</button>';
+                echo '<span class="hint-timer"></span>'; // Affichage du timer
+                echo '<div class="hint-content" style="display:none;">' . htmlspecialchars($hint) . '</div>';
+                echo '</div>';
+            }
+        } else {
+            echo 'Aucun indice trouvé.';
+        }
+        ?>
+    </fieldset>
+</div>
+
     </div>
 <?php endif; ?>
 

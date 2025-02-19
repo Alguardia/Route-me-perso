@@ -229,6 +229,7 @@ legend {
 .hint-toggle {
     background: #09ff00;
     color: black;
+    font-family: "Press Start 2P", serif;
     font-weight: bold;
     border: none;
     padding: 8px 15px;
